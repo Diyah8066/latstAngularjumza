@@ -1,0 +1,48 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>nasheeds</mat-card-title>
+    <mat-card-subtitle>List of nasheeds</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+<div class='container'>
+  <button  mat-raised-button color="primary" (click)="onCreate()">addNasheed</button>
+    <table class="table table-striped">
+      
+    
+        <thead>
+          <tr>
+            <th>S/N</th>
+            <th>MunsheedName</th>
+            <th>Nasheedname</th>
+            <th>NasheedDiscription</th>
+            <th>ProducerOfNasheed</th>
+            <th>Audio</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let nash of nasheeds; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{nash?.customer?.firstname}}</td>
+            <td>{{nash.name}}</td>
+            <td>{{nash.description}}</td>
+            <td>{{nash.producerName}}</td>
+            <td>{{nash.audio}}</td>
+           
+           
+            <td>
+              <a (click)="onEdit(nash)" class="edit">
+                  <mat-icon>edit</mat-icon>
+              </a>
+            </td>
+            <td>
+              <a (click)="[clickDelete(nash)]" class="delete">
+                <mat-icon>delete_forever</mat-icon>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    

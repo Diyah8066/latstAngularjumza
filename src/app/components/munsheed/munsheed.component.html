@@ -1,0 +1,66 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>munsheeds</mat-card-title>
+    <mat-card-subtitle>List of munsheeds</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+<div class="containr">
+  <!-- <button routerLink="../addmunsheed" class="btn btn-primary">addmunsheed</button> -->
+  <button  mat-raised-button color="primary" (click)="onCreate()">addMunsheed</button>
+<table class="table table-striped">
+    
+        <thead>
+          <tr>
+            <th>S/N</th>
+            <th>FirstName</th>
+            <th>MiddleName</th>
+            <th>lastName</th>
+            <th>Nickname</th>
+            <th>RecordLabel</th>
+             <th>PhoneNumber</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Dob</th>
+            <th>View</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+
+     
+          <tr *ngFor="let munsh of munsheeds; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{munsh.firstname}}</td>
+            <td>{{munsh.middleName}}</td>
+            <td>{{munsh.lastName}}</td>
+            <td>{{munsh.nickname}}</td>
+            <td>{{munsh.recordLabel}}</td>
+            <td>{{munsh.phoneNumber}}</td>
+             <td>{{munsh.address}}</td> 
+            <td>{{munsh.gender}}</td>
+            <td>{{munsh.email}}</td>
+            <td>{{munsh.dob |date:'dd-MM-YY'}}</td>
+            
+          
+            <td>
+              <a (click)="onView(munsh)" class="view">
+                  <mat-icon>remove_red_eye</mat-icon>
+              </a>
+          </td>
+            <td>
+              <a (click)="onEdit(munsh)" class="edit">
+                  <mat-icon>edit</mat-icon>
+              </a>
+            </td>
+            <td>
+              <a (click)="[clickDelete(munsh)]" class="delete">
+                <mat-icon>delete_forever</mat-icon>
+              </a>
+            </td> 
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    

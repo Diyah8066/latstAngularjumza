@@ -1,0 +1,50 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>users</mat-card-title>
+      <mat-card-subtitle>List of users</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+  <div class="containr">
+    <!-- <button routerLink="../addmunsheed" class="btn btn-primary">addmunsheed</button> -->
+    <button  mat-raised-button color="primary" (click)="onCreate()">addUser</button>
+  <table class="table table-striped">
+   
+      
+          <thead>
+            <tr>
+              <th>S/N</th>
+              <th>FirstName</th>
+              <th>lastName</th>
+              <th>Address</th>
+              <th>PhoneNumber</th>
+              <th>Email</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+          
+            <tr *ngFor="let user of user; let i=index">
+              <td>{{i+1}}</td>
+              <td>{{user.f_Name}}</td>
+              <td>{{user.l_Name}}</td>
+              <td>{{user.address}}</td>
+              <td>{{user.phone}}</td>
+              <td>{{user.Email}}</td>
+              
+            
+              <td>
+                <a (click)="onEdit(user)" class="edit">
+                    <mat-icon>edit</mat-icon>
+                </a>
+              </td>
+              <td>
+                <a (click)="[clickDelete(user)]" class="delete">
+                  <mat-icon>delete_forever</mat-icon>
+                </a>
+              </td> 
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      

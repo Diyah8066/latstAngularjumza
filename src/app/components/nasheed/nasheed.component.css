@@ -1,0 +1,14 @@
+.containr{
+    padding: 20px;
+
+}
+.delete{
+    color: red;
+    cursor: pointer;
+}
+.edit{
+    cursor: pointer;
+}
+.view{
+    cursor: pointer;
+}

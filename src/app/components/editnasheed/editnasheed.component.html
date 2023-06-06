@@ -1,0 +1,52 @@
+<div class="container">
+  <form [formGroup]="userForm" (ngSubmit)="onUpdate">
+
+    <div class="row">
+      <div class="col-sm-6">
+        <mat-form-field appearance="outline" class="w-100 full-width">
+          <mat-label>MunsheedsName</mat-label>
+          <mat-select formControlName="customerId">
+            <mat-option *ngFor="let item of munsheeds" [value]="item.id">
+              {{item.firstname}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <mat-form-field appearance="outline" class="w-100 full-width">
+          <mat-label>Enter NasheedName</mat-label>
+          <input matInput formControlName="name" placeholder="name" />
+        </mat-form-field>
+      </div>
+      <div class="col-sm-4">
+        <mat-form-field appearance="outline" class="w-100 full-width">
+          <mat-label>Enter description</mat-label>
+          <input matInput formControlName="description" placeholder="description" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <mat-form-field appearance="outline" class="w-100 full-width">
+          <mat-label>Enter producerName</mat-label>
+          <input matInput formControlName="producerName" placeholder="producerName" />
+        </mat-form-field>
+      </div>
+      <div class="col-sm-4">
+        <mat-form-field appearance="outline" class="w-100 full-width">
+          <mat-label>Enter Audio</mat-label>
+          <input matInput formControlName="audio" placeholder="audio" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <button type="submit" mat-raised-button color="primary" [disabled]="userForm.invalid">save</button>
+        <button type="button" class="btn btn-danger m-1" matDialogClose="no">Close</button>
+      </div>
+    </div>
+  </form>
+</div>

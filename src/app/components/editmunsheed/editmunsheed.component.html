@@ -1,0 +1,109 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Editmunsheeds</mat-card-title>
+  </mat-card-header>
+</mat-card>
+<div class="containr">
+    <form [formGroup]="userForm" (ngSubmit)="onUpdate()">
+      <div class="row">
+        <div class="col-sm-4">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>Enter your first Name</mat-label>
+            <input matInput formControlName="firstname" placeholder="first-name" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-8">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>Enter your middle Name</mat-label>
+            <input matInput formControlName="middleName" placeholder="middl-ename" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>Enter your last Name</mat-label>
+            <input matInput formControlName="lastName" placeholder="last-name" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>Enter your nickname</mat-label>
+            <input matInput formControlName="nickname" placeholder="nick-name" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>Enter your recordLable</mat-label>
+            <input matInput formControlName="recordLabel" placeholder="recordLable" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>Enter your phoneNumber</mat-label>
+            <input matInput type="number" formControlName="phoneNumber" placeholder="phone" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-8">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>Enter your address</mat-label>
+            <input matInput formControlName="address" placeholder="address" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>Choose your gender </mat-label>
+            <mat-select formControlName="gender">
+              <mat-option value="Male">Male</mat-option>
+              <mat-option value="Female">Female</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>Enter your email</mat-label>
+            <input matInput formControlName="email" placeholder="email" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>Enter your date of birth </mat-label>
+            <input matInput [matDatepicker]="dp1" formControlName="dob" placeholder="MM/DD/YYYY" />
+            <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+            <mat-datepicker #dp1></mat-datepicker>
+          </mat-form-field>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <mat-form-field appearance="outline" class="w-100 full-width">
+                <mat-label>Enter your educationLevel </mat-label>
+                <input matInput formControlName="educationLevel" placeholder="educationLevel" />
+              </mat-form-field>
+            </div>
+            <div class="col-sm-4">
+              <mat-form-field appearance="outline" class="w-100 full-width">
+                <mat-label>Enter your programName</mat-label>
+                <input matInput formControlName="programName" placeholder="programName" />
+              </mat-form-field>
+            </div>
+            <div class="col-sm-4">
+              <mat-form-field appearance="outline" class="w-100 full-width">
+                <mat-label>Enter your institutionName</mat-label>
+                <input matInput formControlName="institutionName" placeholder="institutionName" />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="submit" mat-raised-button color="primary" [disabled]="userForm.invalid">save</button>
+            <button type="button" class="btn btn-primary m-1" matDialogClose="no">Close</button>
+        </div>
+        </div>
+    </form>
+  </div>
+  

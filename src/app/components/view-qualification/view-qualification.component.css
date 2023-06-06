@@ -1,0 +1,23 @@
+#heading{
+	font-family: Lucida Bright; 
+	font-weight: bold;
+	color: blue;
+}
+
+#th{
+	text-align: center;
+}
+
+#AssignT{
+	font-family: Segoe UI; 
+	font-weight: bold;
+	padding: 5px 0px 0px 30px;
+}
+
+#AssignTaskForm{
+	border-radius: 6px; 
+	border: 2px solid #ADD2EB; 
+	padding: 20px; 
+	width: 100%; 
+	margin-top: -15px
+}

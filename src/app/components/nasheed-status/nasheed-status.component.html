@@ -1,0 +1,47 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>nasheed-status</mat-card-title>
+      <!-- <mat-card-subtitle>List of nasheeds</mat-card-subtitle> -->
+    </mat-card-header>
+  </mat-card>
+  <div class='container'>
+    <button  mat-raised-button color="primary" (click)="onCreate()">Addstatus</button>
+      <table class="table table-striped">
+        
+      
+          <thead>
+            <tr>
+              <th>S/N</th>
+              <th>NasheedName</th>
+              <th>Status</th>
+              <th>Reasons</th>
+              <th>Discription</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let nash of nasheeds; let i=index">
+              <td>{{i+1}}</td>
+              <td>{{nash?.nasheed?.name}}</td>
+              <td>{{nash.statusname}}</td>
+              <td>{{nash.reasons}}</td>
+              <td>{{nash.description}}</td>
+              
+             
+             
+              <td>
+                <a (click)="onEdit(nash)" class="edit">
+                  <mat-icon>edit</mat-icon>
+              </a>
+              </td>
+              <td>
+                <a (click)="[clickDelete(nash)]" class="delete">
+                  <mat-icon>delete_forever</mat-icon>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      

@@ -1,0 +1,47 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Addstatus</mat-card-title>
+  </mat-card-header>
+</mat-card>
+  <div class="container">
+    <form [formGroup]="userForm" (ngSubmit)="onSave()">
+     <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>nasheedName </mat-label>
+            <mat-select formControlName="nasheedId">
+              <mat-option *ngFor="let item of nasheeds" value="{{item.id}}">
+                {{item.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>Enter Status</mat-label>
+            <input matInput formControlName="statusname" placeholder="statusname" />
+          </mat-form-field>
+        </div>
+     </div>
+        <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>Enter reasons</mat-label>
+            <input matInput formControlName="reasons" placeholder="reasons" />
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field appearance="outline" class="w-100 full-width">
+            <mat-label>Enter description</mat-label>
+            <input matInput formControlName="description" placeholder="description" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <button type="submit" mat-raised-button color="primary" [disabled]="userForm.invalid">save</button>
+          <button type="button" class="btn btn-danger m-1" matDialogClose="no">Close</button>
+        </div>
+      </div>
+    </form>
+  </div>

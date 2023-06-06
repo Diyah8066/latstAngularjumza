@@ -1,0 +1,98 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="Home"><mat-icon></mat-icon>Home</a>
+      <a mat-list-item routerLink="user"> <mat-icon></mat-icon>User</a>
+      <a mat-list-item routerLink="munsheed"> <mat-icon></mat-icon>Munsheed</a>
+     <a mat-list-item routerLink="nasheed"> <mat-icon></mat-icon>Nasheed</a>
+     <a mat-list-item routerLink="nasheed-status"> <mat-icon></mat-icon>Nasheed-status</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>JUMZA REGISTRATION AND INFORMATION SYSTEM</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
+
+
+
+
+<!-- .........................................gghjhjhjj............................................ -->
+<!-- <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar style="background-color:#4827dd;" class="logoSpace justify-content-center">
+      <img src="../../assets/pic2.jpg" title="img" class="rounded-circle imageSize">
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home">
+        <span class="material-icons"></span> &nbsp; home
+      </a>
+      <a mat-list-item routerLink="/munsheed">
+        <span class="material-icons"></span> &nbsp; munsheed
+      </a>
+      <a mat-list-item routerLink="/nasheed">
+        <span class="material-icons"></span> &nbsp; nasheed
+      </a> 
+      <a mat-list-item routerLink="/nasheed-status">
+        <span class="material-icons"></span> &nbsp; nasheed-status
+      </a>  
+     </mat-nav-list>
+  </mat-sidenav> 
+   <mat-sidenav-content>
+    <mat-toolbar style="background-color:#5727dd; margin: auto;" color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="flex justify-start items-center flex-1">
+        <span class="hidden sm:block">
+          <span style="font-size: medium;">JUMZA REGISTRATION AND INFORMATION SYSTEM</span>
+        </span>
+      </div>  
+      <span style="margin-left: auto;font-size: medium;"></span> -->
+       <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with a menu">
+        <mat-icon style="font-size: 20px; margin-left:-120px;">account_circle</mat-icon>
+        &nbsp;Iynaa.&nbsp;Salum
+      </button> 
+      <mat-menu #menu="matMenu"> -->
+        <!-- <button mat-menu-item (click)="onPassword()">
+          <mat-icon>settings</mat-icon>
+          <span>Change Password</span>
+        </button> 
+        <button mat-menu-item (click)="onLogout()">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>  -->
+      <!-- </mat-menu>  -->
+    <!-- </mat-toolbar>
+
+    <div style="padding: 10px;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content> -->
+<!-- </mat-sidenav-container> -->
+
+

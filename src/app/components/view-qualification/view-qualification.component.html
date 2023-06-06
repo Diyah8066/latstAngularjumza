@@ -1,0 +1,43 @@
+<div class="row container-fluid" id="row">
+    <div class="col-sm-8">
+        <table class="table table-hover">
+
+            <h4 id="heading">QUALIFICATION DETAILS</h4>
+            <tbody>
+                
+                <tr>
+                    <th>Nickname</th>
+                    <td *ngFor="let item of munsh">
+                        {{munsh.nickname}}
+                    </td>
+                    </tr>
+                
+
+                   <tr>
+                <tr>
+                    <th>Education Level</th>
+                    <td *ngFor="let item of munsh">
+                        {{munsh.educationLevel}}
+                    </td>
+                    </tr>
+
+                   <tr>
+                    <th>ProgramName</th>
+                    <td *ngFor="let item of munsh">
+                        {{munsh.programName}}
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <th>InstitutionName</th>
+                    <td *ngFor="let item of munsh">
+                        {{munsh.institutionName}}
+
+                    </td>
+
+                </tr>
+            
+            </tbody>
+        
+        </table>
