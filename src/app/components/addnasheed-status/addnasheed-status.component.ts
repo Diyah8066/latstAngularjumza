@@ -39,10 +39,9 @@ export class AddnasheedStatusComponent {
     })
   }
   onSave() {
-    this.nasheedstutusService.add(this.userForm.value).subscribe((data:any)=>{
+    this.nasheedStutusService.add(this.userForm.value).subscribe((data:any)=>{
       this.reload();
       this.dialogRef.close();
-      console.log
     })
   }
   reload(){

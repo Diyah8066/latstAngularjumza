@@ -1,4 +1,7 @@
 export interface Munsheed {
+  institutionName: any;
+  programName: any;
+  educationLevel: any;
   dob: any;
   email: any;
   gender: any;

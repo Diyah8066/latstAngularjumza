@@ -23,7 +23,7 @@ export class AdduserComponent {
         l_Name: new FormControl('',[Validators.required]),
         address: new FormControl('',[Validators.required]),
         phone: new FormControl('',[Validators.required]),
-        Email: new FormControl('',[Validators.required]),
+        email: new FormControl('',[Validators.required]),
       
       });
     }

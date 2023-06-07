@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MunsheedService } from 'src/app/services/munsheed.service';
+import { EditmunsheedComponent } from '../editmunsheed/editmunsheed.component';
 
 @Component({
   selector: 'app-view-qualification',
@@ -12,6 +13,8 @@ export class ViewQualificationComponent {
   id:any;
   munsheeds:any;
 munsh: any;
+  dialog: any;
+  getAllMunsh: any;
 
 
   constructor(private munsheedServices: MunsheedService,
@@ -21,16 +24,14 @@ munsh: any;
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((body: any) => {
       this.id = body.id;
-      let data = [];
 
       this.munsheedServices. getById(this.id).subscribe((munsheed: any) => {
-        data = [munsheed];
-
-        this.munsheeds = data;
-        console.log(data)
+        this.munsheeds = munsheed;
       });
     });
   }
-
+ 
+ 
 
 }
+

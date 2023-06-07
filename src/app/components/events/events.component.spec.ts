@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NasheedComponent } from './nasheed.component';
+import { EventsComponent } from './events.component';
 
-describe('NasheedComponent', () => {
-  let component: NasheedComponent;
-  let fixture: ComponentFixture<NasheedComponent>;
+describe('EventsComponent', () => {
+  let component: EventsComponent;
+  let fixture: ComponentFixture<EventsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NasheedComponent ]
+      declarations: [ EventsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NasheedComponent);
+    fixture = TestBed.createComponent(EventsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

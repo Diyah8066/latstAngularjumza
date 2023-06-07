@@ -35,7 +35,7 @@ export class EditnasheedComponent implements OnInit {
           description: new FormControl(data.description,[Validators.required]),
           producerName: new FormControl(data.producerName,[Validators.required]),
           audio: new FormControl(data.audio,[Validators.required]),
-          customerId: new FormControl(data.audio),
+          // customerId: new FormControl(data.audio),
       })
       }
       

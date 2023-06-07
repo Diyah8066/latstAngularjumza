@@ -26,8 +26,8 @@ getAll(): Observable<NasheedStutus[]> {
 
 
  add(data: any): Observable<any> {
-   return this.http.post <NasheedStutus>(this.apiUrl, data);
- }
+  return this.http.post <NasheedStutus>(this.apiUrl, data);
+}
 
  update(id: any, body: any): Observable<NasheedStutus> {
    const url = `${this.apiUrl}/${id}`;

@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 import { AdduserComponent } from '../adduser/adduser.component';
+import { EdituserComponent } from '../edituser/edituser.component';
 
 @Component({
   selector: 'app-user',
@@ -37,13 +38,13 @@ export class UserComponent  {
   }
 
   
-  onEdit(munsheed:any){
+  onEdit(user:any){
     const options = {
-      data: munsheed,
+      data: user,
       width: '50%',
       disableClose: true,
     };
-    // const dialogRef = this.dialog.open(EditmunsheedComponent, options);
+    const dialogRef = this.dialog.open(EdituserComponent, options);
   }
   clickDelete(user:any){
     if(confirm("Are you sure to delete "+user.firstname+" "+user.lastName)) {

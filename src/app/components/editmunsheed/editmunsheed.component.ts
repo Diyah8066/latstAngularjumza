@@ -18,7 +18,8 @@ export class EditmunsheedComponent {
 
 
   constructor(
-    @Inject(MAT_DIALOG_DATA) public munsheed: Munsheed,
+    @Inject(MAT_DIALOG_DATA)
+    public munsheed: Munsheed,
     public dialogRef: MatDialogRef<EditmunsheedComponent>,
     private munsheedService: MunsheedService,
     private router: Router,
@@ -39,9 +40,9 @@ export class EditmunsheedComponent {
     gender: new FormControl(data.gender, [Validators.required]),
     email: new FormControl(data.email, [Validators.required, Validators.email]),
     dob: new FormControl(data.dob, [Validators.required]),
-    educationLevel: new FormControl('',[Validators.required]),
-    programName: new FormControl('',[Validators.required]),
-    institutionName: new FormControl('',[Validators.required]),
+    educationLevel: new FormControl(data.educationLevel,[Validators.required]),
+    programName: new FormControl(data.programName,[Validators.required]),
+    institutionName: new FormControl(data.institutionName,[Validators.required]),
   })
   }
 

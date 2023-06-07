@@ -14,6 +14,8 @@ import { NasheedStatusComponent } from './components/nasheed-status/nasheed-stat
 import { AddnasheedStatusComponent } from './components/addnasheed-status/addnasheed-status.component';
 import { EditnasheedstatusComponent } from './components/editnasheedstatus/editnasheedstatus.component';
 import { UserComponent } from './components/user/user.component';
+import { EventsComponent } from './components/events/events.component';
+import { EdituserComponent } from './components/edituser/edituser.component';
 
 const routes: Routes = [
  
@@ -83,7 +85,15 @@ const routes: Routes = [
       {
         path:'user',
         component:UserComponent,
+      },
+      {
+        path:'event',
+        component:EventsComponent,
+      },
+      {path:'edituser/:id',
+        component:EdituserComponent,
       }
+      
       
   
      

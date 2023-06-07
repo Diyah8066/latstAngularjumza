@@ -35,6 +35,8 @@ import { AddnasheedStatusComponent } from './components/addnasheed-status/addnas
 import { EditnasheedstatusComponent } from './components/editnasheedstatus/editnasheedstatus.component';
 import { UserComponent } from './components/user/user.component';
 import { AdduserComponent } from './components/adduser/adduser.component';
+import { EdituserComponent } from './components/edituser/edituser.component';
+import { EventsComponent } from './components/events/events.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { AdduserComponent } from './components/adduser/adduser.component';
     EditnasheedstatusComponent,
     UserComponent,
     AdduserComponent,
+    EdituserComponent,
+    EventsComponent,
   
    
   ],

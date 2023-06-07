@@ -12,13 +12,15 @@ import { EditmunsheedComponent } from '../editmunsheed/editmunsheed.component';
 })
 export class MunsheedComponent implements OnInit{
   munsheeds:any;
+id!:string;
 
   constructor(private munsheedService:MunsheedService,
     private router:Router,
     private activateRoute: ActivatedRoute,
-    public dialog: MatDialog,) {}
+    public dialog: MatDialog) {}
 
   ngOnInit(): void {
+
     this.getAllMunsh();
   }
 
